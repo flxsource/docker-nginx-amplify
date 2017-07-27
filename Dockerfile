@@ -21,6 +21,8 @@ RUN unlink /var/log/nginx/access.log \
 
 # Copy nginx stub_status config
 COPY ./conf.d/stub_status.conf /etc/nginx/conf.d
+COPY ./conf.d/default.conf /etc/nginx/conf.d
+COPY ./conf.d/nginx.conf /etc/nginx/
 
 # API_KEY is required for configuring the NGINX Amplify Agent.
 # It could be your real API key for NGINX Amplify here if you wanted
